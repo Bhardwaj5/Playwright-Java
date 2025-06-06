@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite
         SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="OpenCart PW test suite" thread-count="3" parallel="tests" verbose="4">
+<suite name="OpenCart PW test suite" thread-count="1" parallel="tests" verbose="4">
 
 
-    <test preserve-order="true" name="Opencart Homepage">
+    <test name="Opencart Homepage">
+        <parameter name="browser" value="chrome" />
         <classes>
             <class name="com.qa.test.openkart.HomePageTest">
             </class>
@@ -13,6 +14,7 @@
 
 
     <test name="Opencart LoginPage">
+        <parameter name="browser" value="edge" />
           <classes>
             <class name="com.qa.test.openkart.LoginPageTest">
             </class>
@@ -21,6 +23,7 @@
 
 
     <test name="Opencart RegPage">
+        <parameter name="browser" value="chrome" />
          <classes>
             <class name="com.qa.test.openkart.RegPageTest">
             </class>

@@ -7,6 +7,8 @@ import com.qa.designPattern_POM.RegisterationPage_OpenKart;
 import com.qa.opencart.factory.PlaywrightFactory;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 import java.io.IOException;
 import java.util.Properties;
@@ -20,12 +22,18 @@ public class Base_Opencart {
     protected RegisterationPage_OpenKart rp;
     protected Properties prop;
 
+
+
+    @Parameters({"browser"})
     @BeforeTest
-    public void setup() throws IOException
+    public void setup(String browserName) throws IOException
     {
          pf=new PlaywrightFactory();
          prop = pf.readCofiguration();
-         page = pf.init_Playwright();
+         if(browserName!=null) {
+             prop.setProperty("browser",browserName);
+         }
+         page = pf.init_Playwright(prop);
          hm = new Openkart_HomePage(page);
          lm= new LoginPage_OpenKart(page);
     }

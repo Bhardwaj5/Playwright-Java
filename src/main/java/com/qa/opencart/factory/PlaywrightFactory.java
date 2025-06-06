@@ -40,9 +40,8 @@ public class PlaywrightFactory {
         return tl_Page.get();
     }
 
-    public Page init_Playwright() throws IOException {
+    public Page init_Playwright(Properties prop) throws IOException {
 
-        prop = readCofiguration();
         String headless_Value = prop.getProperty("headless_Value");
         String broswerApp = prop.getProperty("browser");
         String url = prop.getProperty("url");
@@ -60,13 +59,11 @@ public class PlaywrightFactory {
                 break;
 
             case "chrome":
-                lp.setChannel(broswerApp);
-                tl_Browser.set(getPlaywright().chromium().launch(lp));
+                tl_Browser.set(getPlaywright().chromium().launch(new BrowserType.LaunchOptions().setChannel("chrome").setHeadless(false)));
                 break;
 
             case "edge":
-                lp.setChannel(broswerApp);
-                browse = playwright.chromium().launch(lp);
+                tl_Browser.set(getPlaywright().chromium().launch(new BrowserType.LaunchOptions().setChannel("msedge").setHeadless(false)));
                 break;
 
             case "firefox":
