@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite
+        SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="OpenCart PW test suite" thread-count="3" parallel="tests" verbose="4">
+
+
+    <test preserve-order="true" name="Opencart Homepage">
+        <classes>
+            <class name="com.qa.test.openkart.HomePageTest">
+            </class>
+        </classes>
+    </test>
+
+
+    <test name="Opencart LoginPage">
+          <classes>
+            <class name="com.qa.test.openkart.LoginPageTest">
+            </class>
+          </classes>
+    </test>
+
+
+    <test name="Opencart RegPage">
+         <classes>
+            <class name="com.qa.test.openkart.RegPageTest">
+            </class>
+        </classes>
+    </test>
+
+
+</suite>
