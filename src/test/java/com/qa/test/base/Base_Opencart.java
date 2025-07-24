@@ -16,12 +16,11 @@ import java.util.Properties;
 public class Base_Opencart {
 
     PlaywrightFactory pf;
-    Page page;
+    protected Page page;
     protected Openkart_HomePage hm;
     protected LoginPage_OpenKart lm;
     protected RegisterationPage_OpenKart rp;
     protected Properties prop;
-
 
 
     @Parameters({"browser"})

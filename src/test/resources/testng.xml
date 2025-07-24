@@ -30,5 +30,13 @@
         </classes>
     </test>
 
+<test name="Take ScreenShots">
+    <parameter name="browser" value="chrome" />
+    <classes>
+        <class name="com.qa.test.practice.ScreenShot">
+        </class>
+    </classes>
+</test>
+
 
 </suite>

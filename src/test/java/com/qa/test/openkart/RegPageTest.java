@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 public class RegPageTest extends Base_Opencart {
 
-    @Test(priority = -1)
+    @Test
     public void enterLoginCredentials() throws InterruptedException {
         lm = hm.navigateTo_loginPage_Openkart();
         lm.openLoginPage();
