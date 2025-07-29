@@ -23,12 +23,15 @@ public class Base_Opencart {
     protected Properties prop;
 
 
-    @Parameters({"browser"})
+    @Parameters({"browser","customURL"})
     @BeforeTest
-    public void setup(String browserName) throws IOException
+    public void setup(String browserName, @Optional String custom_URL) throws IOException
     {
          pf=new PlaywrightFactory();
          prop = pf.readCofiguration();
+        if(custom_URL!=null) {
+            prop.setProperty("url",custom_URL);
+        }
          if(browserName!=null) {
              prop.setProperty("browser",browserName);
          }
