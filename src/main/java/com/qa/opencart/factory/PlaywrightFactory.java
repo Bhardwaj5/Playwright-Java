@@ -5,6 +5,7 @@ import com.microsoft.playwright.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Properties;
 
 public class PlaywrightFactory {
@@ -80,6 +81,11 @@ public class PlaywrightFactory {
                 System.out.println("Please select mentioned browser");
         }
         tl_BrowserContext.set(getBrowser().newContext());
+        if(prop.getProperty("Tracing").equals("true"))
+        {
+            getBrowserContext().tracing().start(new Tracing.StartOptions().setScreenshots(true).setSnapshots(true));
+
+        }
         tl_Page.set(getBrowserContext().newPage());
         getPage().navigate(url);
         return getPage();
@@ -92,4 +98,9 @@ public class PlaywrightFactory {
         return prop;
     }
 
+    public void stopTracing(String getTestName)
+    {
+        getBrowserContext().tracing().stop(new Tracing.StopOptions()
+                    .setPath(Paths.get("./TraceFolder/Trace_"+getTestName+".zip")));
+    }
 }
