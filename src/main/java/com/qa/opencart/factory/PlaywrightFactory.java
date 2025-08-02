@@ -83,7 +83,8 @@ public class PlaywrightFactory {
         tl_BrowserContext.set(getBrowser().newContext());
         if(prop.getProperty("Tracing").equals("true"))
         {
-            getBrowserContext().tracing().start(new Tracing.StartOptions().setScreenshots(true).setSnapshots(true));
+            getBrowserContext().tracing().start(new Tracing.StartOptions()
+                    .setScreenshots(true).setSnapshots(true));
 
         }
         tl_Page.set(getBrowserContext().newPage());

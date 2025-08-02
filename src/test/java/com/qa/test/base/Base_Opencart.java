@@ -6,7 +6,6 @@ import com.qa.designPattern_POM.Openkart_HomePage;
 import com.qa.designPattern_POM.RegisterationPage_OpenKart;
 import com.qa.opencart.factory.PlaywrightFactory;
 import org.testng.ITestContext;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;

@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 
 public class DownloadFiles extends Base_Opencart {
 
-    @Test
+    @Test(groups = {"Practice"})
     public void getDownloadFiles_Status() {
         Download download = page.waitForDownload(() ->{
                 page.click("//a[normalize-space()='chromedriver_linux64.zip']");
