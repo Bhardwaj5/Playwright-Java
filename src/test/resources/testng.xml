@@ -9,31 +9,31 @@
         </run>
     </groups>
 
-<!--    <test name="Opencart Homepage">-->
-<!--        <parameter name="browser" value="chrome" />-->
-<!--        <classes>-->
-<!--            <class name="com.qa.test.openkart.HomePageTest">-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Opencart Homepage">
+        <parameter name="browser" value="chrome" />
+        <classes>
+            <class name="com.qa.test.openkart.HomePageTest">
+            </class>
+        </classes>
+    </test>
 
 
-<!--    <test name="Opencart LoginPage">-->
-<!--        <parameter name="browser" value="edge" />-->
-<!--          <classes>-->
-<!--            <class name="com.qa.test.openkart.LoginPageTest">-->
-<!--            </class>-->
-<!--          </classes>-->
-<!--    </test>-->
+    <test name="Opencart LoginPage">
+        <parameter name="browser" value="edge" />
+          <classes>
+            <class name="com.qa.test.openkart.LoginPageTest">
+            </class>
+          </classes>
+    </test>
 
 
-<!--    <test name="Opencart RegPage">-->
-<!--        <parameter name="browser" value="chrome" />-->
-<!--         <classes>-->
-<!--            <class name="com.qa.test.openkart.RegPageTest">-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Opencart RegPage">
+        <parameter name="browser" value="chrome" />
+         <classes>
+            <class name="com.qa.test.openkart.RegPageTest">
+            </class>
+        </classes>
+    </test>
 
 <test name="Take ScreenShots">
     <parameter name="browser" value="chrome" />
@@ -44,14 +44,14 @@
     </classes>
 </test>
 
-<!--    <test name="Download Files">-->
-<!--        <parameter name="browser" value="chrome" />-->
-<!--        <parameter name="customURL" value="https://chromedriver.storage.googleapis.com/index.html?path=102.0.5005.27/" />-->
-<!--        <classes>-->
-<!--            <class name="com.qa.test.practice.DownloadFiles">-->
-<!--            </class>-->
-<!--        </classes>-->
-<!--    </test>-->
+    <test name="Download Files">
+        <parameter name="browser" value="chrome" />
+        <parameter name="customURL" value="https://chromedriver.storage.googleapis.com/index.html?path=102.0.5005.27/" />
+        <classes>
+            <class name="com.qa.test.practice.DownloadFiles">
+            </class>
+        </classes>
+    </test>
 
 
 </suite>
